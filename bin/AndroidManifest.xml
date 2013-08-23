@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aeexample.gridanimationtest"
+    android:versionCode="9"
+    android:versionName="1.1" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+  
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <!-- REQUIRED PERMISSIONS (for Freewheel/Tremor) -->
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        android:required="false" />
+    <!-- REQUIRED PERMISSIONS (for Urban Airship GCM and Freewheeel/Tremor) -->
+    <uses-permission
+        android:name="android.permission.VIBRATE"
+        android:required="false" />
+
+    <!-- FOR CRITTERCISM -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- MODIFICATION REQUIRED - Replace "com.urbanairship.push.sample" with your package name -->
+    <permission
+        android:name="com.aetn.aetv.watch.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.aetn.aetv.watch.permission.C2D_MESSAGE" />
+    <!-- The two elements above ensure that only this application can receive the messages and registration result -->
+
+
+    <!-- App receives GCM messages. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- END Urban Airship Required Permissions -->
+
+
+    <!-- OPTIONAL Urban Airship Settings -->
+    <!-- REQUIRED FOR LOCATION -->
+    <!-- Use ACCESS_COARSE_LOCATION if GPS access is not necessary -->
+    <!-- <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION"
+        android:required="false" />
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:required="false" /> -->
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.aeexample.GridAnimation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
