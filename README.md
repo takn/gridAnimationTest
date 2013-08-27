@@ -1,4 +1,4 @@
-gridAnimationTest change lolcommit test
+gridAnimationTest
 =================
 
 Simple Test of Grid animations
